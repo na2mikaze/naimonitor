@@ -1,0 +1,18 @@
+# Ignore Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore .env file with sensitive data (like Telegram token)
+.env
+
+# Ignore report file (optional, if you don't want to commit it)
+report.json
+
+# Ignore system files
+.DS_Store
+Thumbs.db

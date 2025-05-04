@@ -1,0 +1,7 @@
+/naimonitor/
+├── monitor.py           # Skrip monitoring utama
+├── requirements.txt     # Daftar dependencies
+├── .env                 # File konfigurasi lingkungan (seperti token Telegram)
+├── report.html          # Dashboard untuk melaporkan serangan
+└── .gitignore           # Menyaring file yang tidak perlu disimpan di GitHub
+└── .htpasswd            # File autentikasi jika menggunakan basic auth (jika diperlukan)
