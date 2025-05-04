@@ -67,7 +67,7 @@
 
     const updateDashboard = async (selectedDate = null) => {
       try {
-        const res = await fetch("report.json?ts=" + new Date().getTime());
+        const res = await fetch("naireport.json?ts=" + new Date().getTime());
         const json = await res.json();
 
         let data = json;
