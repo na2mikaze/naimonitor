@@ -1,31 +1,57 @@
-{
-  "threat_count": {
-    "Low": 5,
-    "Medium": 8,
-    "High": 2,
-    "Critical": 1
-  },
-  "latest_evidence": "GET /wp-login.php HTTP/1.1",
-  "history": [
-    {
-      "date": "2025-05-01",
-      "threat_count": {
-        "Low": 1,
-        "Medium": 3,
-        "High": 0,
-        "Critical": 0
-      },
-      "latest_evidence": "GET /.env"
-    },
-    {
-      "date": "2025-05-02",
-      "threat_count": {
-        "Low": 2,
-        "Medium": 1,
-        "High": 2,
-        "Critical": 0
-      },
-      "latest_evidence": "POST /cmd?exec=ls"
+import json
+import time
+from datetime import datetime
+
+# Fungsi untuk menyimpan data ke naireport.json
+def update_report_json():
+    global threat_count, recon_count, latest_evidence
+
+    data = {
+        "Low": threat_count["Low"],
+        "Medium": threat_count["Medium"],
+        "High": threat_count["High"],
+        "Critical": threat_count["Critical"],
+        "Reconnaissance": recon_count,
+        "LatestEvidence": latest_evidence,
+        "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
-  ]
-}
+
+    # Simpan data ke naireport.json
+    try:
+        with open("/var/www/html/naireport.json", "w") as json_file:
+            json.dump(data, json_file, indent=4)
+        print("[*] Laporan telah diperbarui di naireport.json")
+    except Exception as e:
+        print(f"[!] Gagal menyimpan laporan: {e}")
+
+# Panggil update_report_json setiap ada pembaruan ancaman
+def monitor_log():
+    global threat_count, recon_count, latest_evidence
+
+    try:
+        with open(log_path, "r") as f:
+            f.seek(0, 2)  # baca dari akhir file (tail)
+            while True:
+                line = f.readline()
+                if not line:
+                    time.sleep(0.5)
+                    continue
+
+                result = classify_log_line(line)
+
+                # Jika ada ancaman terdeteksi
+                if result["matched"]:
+                    level = result["level"]
+                    threat_count[level] += 1
+                    latest_evidence = result["evidence"]
+                    if result["category"] == "Reconnaissance":
+                        recon_count += 1
+
+                    update_report_json()  # Update naireport.json setelah deteksi ancaman
+
+                time.sleep(1)  # Delay ringan
+
+    except KeyboardInterrupt:
+        print("\n[!] Monitoring dihentikan oleh pengguna.")
+    except FileNotFoundError:
+        print(f"[!] File log tidak ditemukan: {log_path}")
