@@ -11,7 +11,7 @@ env/
 .env
 
 # Ignore report file (optional, if you don't want to commit it)
-report.json
+naireport.json
 
 # Ignore system files
 .DS_Store
