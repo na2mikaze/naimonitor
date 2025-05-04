@@ -1,7 +1,7 @@
 
-# 🛡️ naimonitor - AI-based Apache Server Log Security Monitor
+# 🛡️ Naimonitor - AI-based Apache Server Log Security Monitor
 
-`naimonitor` adalah tools monitoring keamanan server berbasis AI yang mendeteksi log mencurigakan pada Apache dan mengirimkan notifikasi real-time ke Telegram serta menampilkan dashboard `report.html` secara live. Tools ini open-source dan mudah diinstal di server Linux.
+`Naimonitor` adalah tools monitoring keamanan server berbasis AI yang mendeteksi log mencurigakan pada Apache dan mengirimkan notifikasi real-time ke Telegram serta menampilkan dashboard `report.html` secara live. Tools ini open-source dan mudah diinstal di server Linux.
 
 ## 🚀 Fitur
 
@@ -151,5 +151,5 @@ MIT License – bebas digunakan, dimodifikasi, dan dikembangkan selama mencantum
 
 ## 👤 Pembuat
 
-naimonitor dibuat oleh [Nana Namikaze]  
+Naimonitor dibuat oleh [Nana Namikaze]  
 GitHub: https://github.com/na2mikaze
