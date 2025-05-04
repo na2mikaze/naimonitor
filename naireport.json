@@ -1,0 +1,31 @@
+{
+  "threat_count": {
+    "Low": 5,
+    "Medium": 8,
+    "High": 2,
+    "Critical": 1
+  },
+  "latest_evidence": "GET /wp-login.php HTTP/1.1",
+  "history": [
+    {
+      "date": "2025-05-01",
+      "threat_count": {
+        "Low": 1,
+        "Medium": 3,
+        "High": 0,
+        "Critical": 0
+      },
+      "latest_evidence": "GET /.env"
+    },
+    {
+      "date": "2025-05-02",
+      "threat_count": {
+        "Low": 2,
+        "Medium": 1,
+        "High": 2,
+        "Critical": 0
+      },
+      "latest_evidence": "POST /cmd?exec=ls"
+    }
+  ]
+}
