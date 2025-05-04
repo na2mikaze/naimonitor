@@ -149,6 +149,24 @@ Pull Request dan Issue terbuka untuk pengembangan. Kamu juga bisa fork dan sesua
 
 MIT License – bebas digunakan, dimodifikasi, dan dikembangkan selama mencantumkan credit kepada pembuat asli.
 
+## ⚠️ Disclaimer
+
+1. **Penggunaan dan Tanggung Jawab**:  
+   `Naimonitor` dirancang untuk membantu dalam mendeteksi ancaman dan aktivitas mencurigakan pada server Apache. Namun, penggunaan alat ini sepenuhnya merupakan tanggung jawab pengguna. Kami tidak bertanggung jawab atas kerugian atau kerusakan yang terjadi akibat penggunaan alat ini.
+
+2. **Keamanan dan Perlindungan Data**:  
+   `Naimonitor` berfungsi untuk memonitor dan menganalisis log Apache. Meskipun kami berusaha keras untuk memastikan alat ini bekerja dengan aman dan efektif, pastikan untuk selalu mengonfigurasi sistem dengan bijak dan sesuai dengan kebijakan keamanan yang berlaku pada organisasi atau server Anda. Alat ini tidak dimaksudkan untuk menggantikan perangkat keamanan profesional.
+
+3. **Privasi dan Akses Data**:  
+   Selama penggunaan alat ini, data yang dikumpulkan melalui log Apache akan diproses. Pastikan untuk memahami bahwa data log tersebut dapat berisi informasi sensitif yang terkait dengan pengguna dan perangkat yang mengakses server Anda. Jangan biarkan file log atau informasi sensitif lainnya dapat diakses oleh pihak yang tidak berwenang.
+
+4. **Lisensi dan Penggunaan Kode**:  
+   Kode sumber `Naimonitor` dilisensikan di bawah **MIT License**, yang memungkinkan siapa saja untuk menggunakan, memodifikasi, dan mendistribusikan ulang alat ini. Meskipun demikian, kami mengingatkan pengguna untuk menggunakan alat ini sesuai dengan hukum dan peraturan yang berlaku, serta menjaga keamanan dan privasi data.
+
+5. **Pembaruan dan Dukungan**:  
+   Alat ini dikembangkan dan dipelihara oleh pengembang komunitas dan mungkin tidak menyediakan dukungan langsung atau pembaruan rutin. Kami menyarankan untuk selalu mengikuti pengembangan terbaru dan memverifikasi apakah alat ini sesuai dengan kebutuhan dan sistem Anda.
+
+
 ## 👤 Pembuat
 
 Naimonitor dibuat oleh [Nana Namikaze]  
