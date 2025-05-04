@@ -15,7 +15,7 @@ load_dotenv()  # Load variables from .env file
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN") 
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 log_path = "/var/log/apache2/access.log"
-report_path = "report.json"
+report_path = "naireport.json"
 
 # === POLA SERANGAN ===
 attack_patterns = [
