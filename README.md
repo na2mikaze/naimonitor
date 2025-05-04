@@ -60,7 +60,7 @@ LOG_PATH=/var/log/apache2/access.log
 ### 5. Jalankan Tools Monitoring
 
 ```bash
-python3 monitor.py
+python3 naimonitor.py
 ```
 
 ### 6. Salin `naireport.html` ke Apache Web Directory
