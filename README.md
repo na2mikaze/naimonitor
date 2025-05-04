@@ -121,7 +121,7 @@ http://your_server_ip/naireport.html
 
 Login:
 
-- Username: naimonitor1
+- Username: naimonitor
 - Password: password
 
 ## 🌀 Jalankan Otomatis Saat Reboot (Opsional)
