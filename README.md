@@ -63,6 +63,8 @@ Dengan menggunakan NaiMonitor, Anda setuju bahwa:
 3. Alat ini tidak dimaksudkan untuk peretasan atau serangan.
 4. Gunakan hanya untuk tujuan legal dan etis.
 
+---
+
 ##👤 Pembuat
 
 NaiMonitor dibuat oleh [Nana Namikaze]
