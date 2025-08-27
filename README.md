@@ -9,7 +9,7 @@ NaiMonitor adalah tools open-source berbasis Artificial Intelligence (AI) yang d
 - **Instant Telegram Alerts**: Mengirimkan notifikasi real-time ke Telegram setiap kali ada aktivitas mencurigakan, lengkap dengan detail serangan.
 - **Daily/Weekly/Monthly Reports**: Membuat laporan otomatis dalam format HTML setiap hari jam tertentu, serta bisa diakses via perintah Telegram /laporan (harian, mingguan, bulanan).
 - **Evidence Tracking**: Menyimpan bukti log serangan terbaru lengkap dengan tanggal & waktu untuk kebutuhan audit dan investigasi.
-- **Customizable**: Konfigurasi fleksibel melalui file config.json agar mudah disesuaikan dengan kebutuhan organisasi.
+- **Customizable**: Dapat disesuaikan dengan kebutuhan organisasi Anda.
 
 ## 📊 Monitoring Data
 NaiMonitor menampilkan informasi berikut:
