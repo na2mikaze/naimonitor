@@ -2,6 +2,8 @@
 flask==3.0.3
 jinja2==3.1.4
 werkzeug==3.0.4
+flask-socketio==5.3.7
+eventlet==0.37.0
 
 # Data handling
 pandas==2.2.2
@@ -10,16 +12,29 @@ numpy==2.1.1
 # AI & Machine Learning
 scikit-learn==1.5.2
 joblib==1.4.2
+scipy==1.14.1
 
 # Monitoring & Scheduling
 watchdog==4.0.2
 schedule==1.2.2
+psutil==6.0.0
 
 # Telegram API
 requests==2.32.3
 
 # Logging & Utils
 python-dotenv==1.0.1
+rich==13.8.1
 
 # Optional (untuk keamanan tambahan & parsing log)
 regex==2024.7.24
+tqdm==4.66.5
+
+# Security & API
+pyjwt==2.9.0
+cryptography==43.0.1
+flask-limiter==3.8.0
+
+# Visualization (untuk dashboard laporan)
+plotly==5.24.0
+matplotlib==3.9.2
