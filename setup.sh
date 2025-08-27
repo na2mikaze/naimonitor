@@ -8,6 +8,7 @@ SERVICE_NAME="naimonitor"
 INSTALL_DIR="/opt/$SERVICE_NAME"
 VENV_DIR="$INSTALL_DIR/venv"
 SERVICE_FILE="/etc/systemd/system/$SERVICE_NAME.service"
+LOG_FILE="/var/log/$SERVICE_NAME.log"
 
 echo "🚀 Mulai instalasi $SERVICE_NAME ..."
 
@@ -46,6 +47,13 @@ else
     echo "⚙️ config.json sudah ada, skip..."
 fi
 
+# Buat log file
+if [ ! -f "$LOG_FILE" ]; then
+    echo "📝 Membuat log file di $LOG_FILE..."
+    sudo touch $LOG_FILE
+    sudo chown $USER:$USER $LOG_FILE
+fi
+
 # Buat systemd service
 echo "🛠️ Membuat systemd service..."
 sudo tee $SERVICE_FILE > /dev/null <<EOL
@@ -55,10 +63,13 @@ After=network.target
 
 [Service]
 ExecStart=$VENV_DIR/bin/python $INSTALL_DIR/naimonitor.py
+ExecStop=/bin/kill -s TERM \$MAINPID
 WorkingDirectory=$INSTALL_DIR
 Restart=always
 User=$USER
 Group=$USER
+StandardOutput=append:$LOG_FILE
+StandardError=append:$LOG_FILE
 
 [Install]
 WantedBy=multi-user.target
@@ -72,7 +83,18 @@ sudo systemctl restart $SERVICE_NAME
 
 # Status
 echo "✅ Instalasi selesai!"
-echo "Cek status service dengan:"
-echo "  sudo systemctl status $SERVICE_NAME"
-echo "Lihat log realtime dengan:"
-echo "  journalctl -fu $SERVICE_NAME"
+echo ""
+echo "👉 Cek status service dengan:"
+echo "   sudo systemctl status $SERVICE_NAME"
+echo ""
+echo "👉 Lihat log realtime dengan:"
+echo "   journalctl -fu $SERVICE_NAME"
+echo ""
+echo "👉 Lihat log khusus di file:"
+echo "   tail -f $LOG_FILE"
+echo ""
+echo "👉 Hentikan service dengan:"
+echo "   sudo systemctl stop $SERVICE_NAME"
+echo ""
+echo "👉 Restart service dengan:"
+echo "   sudo systemctl restart $SERVICE_NAME"
