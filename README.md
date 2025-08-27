@@ -1,123 +1,69 @@
-🛡️ Naimonitor
+# 🛡️ NaiMonitor - AI-Powered Apache Security Monitoring Tool
 
-AI-Powered Security Monitoring Tool for Apache/Linux Servers
+NaiMonitor adalah tools open-source berbasis Artificial Intelligence (AI) yang dirancang untuk membantu administrator server dalam memantau keamanan server Apache secara real-time. NaiMonitor mampu mendeteksi aktivitas mencurigakan, memberikan notifikasi ke Telegram, serta menyajikan laporan interaktif melalui dashboard web modern.
 
-Naimonitor adalah tools keamanan server berbasis AI yang memantau log server (Apache2), mendeteksi aktivitas mencurigakan secara real-time, mengirimkan notifikasi ke Telegram, dan menghasilkan dashboard report modern dengan grafik interaktif.
+## 🚀 Fitur Utama
 
-✨ Fitur Utama
+- **Real-Time Monitoring**: Mendeteksi aktivitas mencurigakan secara langsung dari log Apache.
+- **AI Threat Detection**: Analisis berbasis AI untuk mengidentifikasi pola serangan seperti botnet, brute-force, scanning, reconnaissance, hingga automation script.
+- **Alert Notification** : Mengirim notifikasi otomatis ke Telegram ketika terdeteksi aktivitas berbahaya.
+- **Daily Report**: Membuat laporan harian secara otomatis (HTML) dengan statistik serangan.
+- **Interactive Dashboard**: Dashboard modern, responsif, dan real-time dengan grafik interaktif, termasuk filter laporan harian, mingguan, dan bulanan.
+- **Evidence Tracking**: Menyimpan bukti log terbaru sesuai tanggal & waktu.
+- **Customizable**: Dapat disesuaikan dengan kebutuhan organisasi Anda.
 
-🔥 Monitoring Realtime log Apache2
+## 📊 Monitoring Data
+NaiMonitor menampilkan informasi berikut:
+- Jumlah ancaman berdasarkan level (Low, Medium, High, Critical).
+- Jumlah aksi scanning / reconnaissance.
+- Bukti (evidence) log terbaru.
+- Statistik serangan per hari, minggu, atau bulan.
 
-🤖 Deteksi AI untuk aktivitas mencurigakan (brute-force, botnet, scanning, automation scripts)
+## 🔧 Cara Menggunakan
+#### 1. Clone Repositori ini
+'''bash
+git clone https://github.com/na2mikaze/NaiMonitor.git
+cd NaiMonitor
+'''
 
-📲 Notifikasi Telegram setiap ada aktivitas berbahaya
+#### 2. Instalasi
+Jalankan script instalasi:
+'''bash
+chmod +x setup.sh
+./setup.sh
+'''
 
-📊 Dashboard Report Modern (HTML + Chart + Filter Harian/Mingguan/Bulanan)
+#### 3. Menjalankan NaiMonitor
+Setelah instalasi, jalankan:
+'''bash
+python3 monitor.py
+'''
+Atau jalankan sebagai service:
+'''bash
+systemctl start naimonitor
+'''
 
-⏰ Laporan Harian Otomatis terkirim setiap jam 08:00 pagi
+## 🤝 Kontribusi
 
-⚡ Systemd Service untuk auto-run setelah server boot
+Kontribusi selalu terbuka!
+Jika Anda ingin berkontribusi atau menambahkan fitur baru, silakan buka isu atau buat pull request.
 
-🔒 Tidak auto-block IP → hanya monitoring & alert
+## 📄 MIT License
 
-📦 Instalasi
-1️⃣ Clone Repository
-git clone https://github.com/username/naimonitor.git
-cd naimonitor
+NaiMonitor dilisensikan di bawah MIT License.
 
-2️⃣ Setup Virtual Environment
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+## ⚠️ Disclaimer
 
-3️⃣ Konfigurasi
+NaiMonitor adalah alat monitoring yang ditujukan untuk keamanan server Apache.
+Harap gunakan hanya pada server milik sendiri atau yang Anda miliki izin eksplisit untuk dipantau.
 
-Copy file contoh konfigurasi:
+Dengan menggunakan NaiMonitor, Anda setuju bahwa:
+1. Anda bertanggung jawab penuh atas penggunaan alat ini.
+2. Pengembang tidak bertanggung jawab atas kerusakan, kehilangan data, atau konsekuensi hukum dari penggunaannya.
+3. Alat ini tidak dimaksudkan untuk peretasan atau serangan.
+4. Gunakan hanya untuk tujuan legal dan etis.
 
-cp config.example.json config.json
+##👤 Pembuat
 
-
-Edit config.json untuk menambahkan:
-
-Token Bot Telegram
-
-Chat ID Telegram
-
-Path log Apache (misalnya /var/log/apache2/access.log)
-
-▶️ Menjalankan
-Jalankan Manual
-python naimonitor.py
-
-Jalankan Sebagai Service
-sudo cp systemd/naimonitor.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable naimonitor
-sudo systemctl start naimonitor
-
-
-Cek status:
-
-sudo systemctl status naimonitor
-
-📊 Dashboard Report
-
-Laporan otomatis tersimpan di:
-
-/opt/naimonitor/report.html
-
-
-Fitur Dashboard:
-
-Grafik jumlah ancaman per level (Low, Medium, High, Critical)
-
-Statistik scanning/reconnaissance
-
-Evidence serangan terbaru
-
-Filter tanggal (Harian / Mingguan / Bulanan)
-
-🛡️ Contoh Alert Telegram
-
-📌 Notifikasi Realtime:
-
-🚨 [HIGH] Suspicious login attempt detected!
-IP: 192.168.1.100
-Time: 2025-08-20 08:45:12
-Evidence: Multiple failed login requests
-
-
-📌 Laporan Harian:
-
-📊 Naimonitor Daily Report
-Date: 2025-08-20
-- Critical: 2
-- High: 5
-- Medium: 12
-- Low: 23
-- Reconnaissance: 8
-
-🔧 Struktur Project
-naimonitor/
-├── naimonitor.py          # Main script AI monitoring
-├── requirements.txt       # Dependencies
-├── README.md              # Dokumentasi
-├── LICENSE                # Lisensi
-├── config.example.json    # Contoh konfigurasi
-├── report.html            # Dashboard report
-├── systemd/
-│   └── naimonitor.service # File systemd service
-├── docs/
-│   └── usage.md           # Dokumentasi tambahan
-└── setup.sh               # Script auto instalasi (opsional)
-
-🤝 Kontribusi
-
-Pull request sangat diterima. Untuk perubahan besar, silakan buka issue terlebih dahulu untuk mendiskusikan apa yang ingin Anda ubah.
-
-📜 Lisensi
-
-MIT License
- © 2025
-
-⚡ Dibuat dengan ❤️ oleh Nana Irmanto
+NaiMonitor dibuat oleh [Nana Namikaze]
+GitHub: https://github.com/na2mikaze
