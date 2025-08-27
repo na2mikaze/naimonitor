@@ -21,27 +21,27 @@ NaiMonitor menampilkan informasi berikut:
 
 ## 🔧 Cara Menggunakan
 #### 1. Clone Repositori ini
-'''bash
+```bash
 git clone https://github.com/na2mikaze/NaiMonitor.git
 cd NaiMonitor
-'''
+```
 
 #### 2. Instalasi
 Jalankan script instalasi:
-'''bash
+```bash
 chmod +x setup.sh
 ./setup.sh
-'''
+```
 
 #### 3. Menjalankan NaiMonitor
 Setelah instalasi, jalankan:
-'''bash
+```bash
 python3 monitor.py
-'''
+```
 Atau jalankan sebagai service:
-'''bash
+```bash
 systemctl start naimonitor
-'''
+```
 
 ## 🤝 Kontribusi
 
