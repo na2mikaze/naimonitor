@@ -1,0 +1,15 @@
+[Unit]
+Description=Naimonitor AI Security Monitoring
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/naimonitor
+ExecStart=/opt/naimonitor/venv/bin/python /opt/naimonitor/naimonitor.py
+Restart=always
+RestartSec=5
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
