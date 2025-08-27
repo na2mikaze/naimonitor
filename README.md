@@ -4,13 +4,12 @@ NaiMonitor adalah tools open-source berbasis Artificial Intelligence (AI) yang d
 
 ## 🚀 Fitur Utama
 
-- **Real-Time Monitoring**: Mendeteksi aktivitas mencurigakan secara langsung dari log Apache.
-- **AI Threat Detection**: Analisis berbasis AI untuk mengidentifikasi pola serangan seperti botnet, brute-force, scanning, reconnaissance, hingga automation script.
-- **Alert Notification** : Mengirim notifikasi otomatis ke Telegram ketika terdeteksi aktivitas berbahaya.
-- **Daily Report**: Membuat laporan harian secara otomatis (HTML) dengan statistik serangan.
-- **Interactive Dashboard**: Dashboard modern, responsif, dan real-time dengan grafik interaktif, termasuk filter laporan harian, mingguan, dan bulanan.
-- **Evidence Tracking**: Menyimpan bukti log terbaru sesuai tanggal & waktu.
-- **Customizable**: Dapat disesuaikan dengan kebutuhan organisasi Anda.
+- **Real-Time Monitoring**: Memantau log Apache secara langsung dan mendeteksi aktivitas mencurigakan secara cepat.
+- **AI Threat Detection**: Analisis berbasis AI untuk mengenali pola serangan seperti brute-force, botnet, scanning, reconnaissance, hingga automated attack scripts.
+- **Instant Telegram Alerts**: Mengirimkan notifikasi real-time ke Telegram setiap kali ada aktivitas mencurigakan, lengkap dengan detail serangan.
+- **Daily/Weekly/Monthly Reports**: Membuat laporan otomatis dalam format HTML setiap hari jam tertentu, serta bisa diakses via perintah Telegram /laporan (harian, mingguan, bulanan).
+- **Evidence Tracking**: Menyimpan bukti log serangan terbaru lengkap dengan tanggal & waktu untuk kebutuhan audit dan investigasi.
+- **Customizable**: Konfigurasi fleksibel melalui file config.json agar mudah disesuaikan dengan kebutuhan organisasi.
 
 ## 📊 Monitoring Data
 NaiMonitor menampilkan informasi berikut:
