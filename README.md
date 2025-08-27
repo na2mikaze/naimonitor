@@ -66,5 +66,5 @@ Dengan menggunakan NaiMonitor, Anda setuju bahwa:
 
 ## 👤 Pembuat
 
-NaiMonitor dibuat oleh [Nana Namikaze]
+NaiMonitor dibuat oleh [Nana I]
 GitHub: https://github.com/na2mikaze
