@@ -1,0 +1,25 @@
+{
+  "telegram": {
+    "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+  },
+  "log": {
+    "apache_access_log": "/var/log/apache2/access.log",
+    "apache_error_log": "/var/log/apache2/error.log"
+  },
+  "monitoring": {
+    "realtime": true
+  },
+  "ai": {
+    "enabled": true,
+    "model": "scikit-learn",
+    "patterns": [
+      "sql injection",
+      "xss attempt",
+      "brute force",
+      "botnet activity",
+      "scan/recon"
+    ]
+  }
+}
+
