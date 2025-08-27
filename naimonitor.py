@@ -21,7 +21,7 @@ LOG_SOURCES = [
 ]
 EVENTS_FILE = "/var/www/naimonitor/events.jsonl"
 
-TELEGRAM_TOKEN = ""
+TELEGRAM_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 CHAT_ID = 12345 #Contoh
 
 ALERT_FLUSH_INTERVAL = 60
@@ -300,4 +300,5 @@ def run_bot():
     app.run_polling(close_loop=False)
 
 if __name__ == "__main__":
+
     run_bot()
