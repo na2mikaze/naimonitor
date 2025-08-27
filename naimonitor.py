@@ -43,8 +43,8 @@ LOG_SOURCES = [
 EVENTS_FILE = "/var/www/naimonitor/events.jsonl"
 
 # Prefer environment variables (safer); fallback to empty string
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "")
-CHAT_ID = int(os.getenv("CHAT_ID", "0") or 0)
+TELEGRAM_TOKEN = ""
+CHAT_ID = 12345 #Contoh
 
 # You can hardcode token/chat (not recommended):
 # TELEGRAM_TOKEN = "8134450609:AAHp3zIOCRJC1swTy7jgNqssXmORnU49xXQ"
@@ -549,3 +549,4 @@ def run_bot():
 
 if __name__ == "__main__":
     run_bot()
+
