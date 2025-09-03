@@ -46,9 +46,6 @@ EVENTS_FILE = "/var/www/naimonitor/events.jsonl"
 TELEGRAM_TOKEN = ""
 CHAT_ID = 12345 #Contoh
 
-# You can hardcode token/chat (not recommended):
-# TELEGRAM_TOKEN = "8134450609:AAHp3zIOCRJC1swTy7jgNqssXmORnU49xXQ"
-# CHAT_ID = 1198097123
 
 ALERT_FLUSH_INTERVAL = int(os.getenv("ALERT_FLUSH_INTERVAL", "60"))
 MAX_EVIDENCE_LINES = int(os.getenv("MAX_EVIDENCE_LINES", "10"))
@@ -549,4 +546,5 @@ def run_bot():
 
 if __name__ == "__main__":
     run_bot()
+
 
